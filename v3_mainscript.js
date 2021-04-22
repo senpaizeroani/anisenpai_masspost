@@ -115,9 +115,18 @@ document.body.innerHTML += `
   </div>
 </div>
 `;
-
+var wpIsHidden = true;
 let triggerBox1 = () => {
-  document.querySelector(".box1").classList.toggle("hiddenBox1")
+  document.querySelector(".box1").classList.toggle("hiddenBox1");
+  if(window.wpIsHidden){
+    window.wpIsHidden = false;
+    document.getElementById("wpbody-content").style.opacity = 1;
+    document.getElementById("wpbody-content").style.pointerEvents = "all";
+  }else{
+    window.wpIsHidden = true;
+    document.getElementById("wpbody-content").style.opacity = 0.4;
+    document.getElementById("wpbody-content").style.pointerEvents = "none";
+  }
 }
 
 let unselectKategory = () => {
