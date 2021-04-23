@@ -14,13 +14,14 @@ for(var i = 0; i < kategoryObjs.length; i++){
   //add visual html
   kategoryList_html += `<option value="${kategoryObjs_label.innerText}">`;
 }
-
-var countEpObj = document.querySelector("#MySel");
-countEpObj.innerHTML += `<option value="0">0</option>`;
-for(var y = 101; y < 5000; y++){
-  countEpObj.innerHTML += `<option value="${y}">${y}</option>`;
-}
-populate(countEpObj,"MyTable");
+setTimeout(()=>{
+	var countEpObj = document.querySelector("#MySel");
+	countEpObj.innerHTML += `<option value="0">0</option>`;
+	for(var y = 101; y < 1000; y++){
+	  countEpObj.innerHTML += `<option value="${y}">${y}</option>`;
+	}
+	populate(countEpObj,"MyTable");
+}, 1000);
 
 document.body.innerHTML += `
 <style>
