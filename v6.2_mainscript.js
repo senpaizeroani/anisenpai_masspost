@@ -16,7 +16,7 @@ for(var i = 0; i < kategoryObjs.length; i++){
 }
 
 var countEpObj = document.querySelector("#MySel");
-countEpObj.innerHTML = `<option value="0">0</option>`;
+countEpObj.innerHTML = ``;
 for(var y = 1; y < 301; y++){
   countEpObj.innerHTML += `<option value="${y}">${y}</option>`;
 }
